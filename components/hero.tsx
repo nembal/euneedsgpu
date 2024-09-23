@@ -12,12 +12,12 @@ export function Hero() { // Changed function name to PascalCase for React compon
     <div className="space-y-32">
       <section className="relative flex flex-col items-center justify-center max-h-[66vh] min-h-[66vh] bg-blue-200">
         <div className="text-center animate-fadeIn">
-          <p className="text-lg">A STATEMENT</p>
-          <h1 className="text-4xl font-bold">
+          <p className="text-2xl">A STATEMENT</p>
+          <h1 className="text-8xl font-bold">
             Europe needs <br /> more GPUs for AI
           </h1>
           <a href="#signup">
-            <Button className="mt-4 rounded-full">Get GPUs in Europe</Button>
+            <Button className="mt-16 rounded-full border-2 border-secondary">Get GPUs in Europe</Button>
           </a>
         </div>
         <div className="absolute bottom-0 w-full text-center pb-4">
