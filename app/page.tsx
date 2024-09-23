@@ -1,9 +1,15 @@
+import React from "react";
 import { Hero } from "@/components/hero";
+import Footer from "@/components/footer";
 
-export default function Home() {
+const HomePage = () => {
   return (
-    <div className="min-h-screen p-8 pb-20 sm:p-20">
+    <>
       <Hero />
-    </div>
+      {/* Other page components */}
+      <Footer />
+    </>
   );
-}
+};
+
+export default HomePage;
