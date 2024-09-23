@@ -10,7 +10,7 @@ import Image from "next/image"; // Import Next.js Image component
 export function Hero() { // Changed function name to PascalCase for React components
   return (
     <div className="space-y-32">
-      <section className="relative flex flex-col items-center justify-center max-h-[66vh] min-h-[66vh] bg-blue-100">
+      <section className="relative flex flex-col items-center justify-center max-h-[66vh] min-h-[66vh] bg-blue-200">
         <div className="text-center animate-fadeIn">
           <p className="text-lg">A STATEMENT</p>
           <h1 className="text-4xl font-bold">
@@ -36,7 +36,7 @@ export function Hero() { // Changed function name to PascalCase for React compon
           The future of AI in Europe hinges on our ability to develop and maintain world-class computing infrastructure within our borders. This is not merely a matter of technological advancement, but a cornerstone of European digital sovereignty and competitiveness. EU-based compute ensures that sensitive European data remains within our jurisdiction, adhering to our stringent privacy standards. It allows us to develop AI models that reflect European values, languages, and cultural nuances. By fostering a robust AI ecosystem built on EU compute resources, we create high-skilled jobs and drive economic growth across the continent.
         </p>
         <p>
-          <a href="https://example.com/open-letter" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
+          <a href="https://euneedsai.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
             Read and Sign the Open Letter on AI Regulation
           </a>
         </p>
@@ -74,7 +74,7 @@ export function Hero() { // Changed function name to PascalCase for React compon
         </div>
       </section>
 
-      <section className="w-full bg-blue-100 space-y-32 py-32">
+      <section className="w-full bg-blue-200 space-y-32 py-32">
         <div className="max-w-2xl mx-auto space-y-4">
           <h2 className="text-xl font-bold">GPUs for Europe</h2>
           <p>
