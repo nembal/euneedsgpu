@@ -9,11 +9,11 @@ import Image from "next/image"; // Import Next.js Image component
 
 export function Hero() { // Changed function name to PascalCase for React components
   return (
-    <div className="space-y-32">
+    <div className="space-y-16 ">
       <section className="relative flex flex-col items-center justify-center max-h-[66vh] min-h-[66vh] bg-blue-200">
-        <div className="text-center animate-fadeIn">
+        <div className="text-center animate-fadeIn p-3 sm:p-0">
           <p className="text-2xl">A STATEMENT</p>
-          <h1 className="text-8xl font-bold">
+          <h1 className="text-6xl sm:text-8xl font-bold">
             Europe needs <br /> more GPUs for AI
           </h1>
           <a href="#signup">
@@ -26,7 +26,7 @@ export function Hero() { // Changed function name to PascalCase for React compon
           </p>
         </div>
       </section>
-      <section className="max-w-2xl mx-auto space-y-4">
+      <section className="max-w-2xl mx-auto space-y-4 p-3 sm:p-0">
         <h2 className="text-xl font-bold">Hardware and Software: The Foundation for AI Leadership in Europe</h2>
         <p>
           As a technology company deeply invested in Europe&apos;s future, we firmly believe that robust EU-based compute infrastructure, both hardware and software, is the bedrock upon which European AI innovation must be built. The two are inextricably linked – without significant local computing power, particularly GPU resources, and advanced software, there can be no meaningful AI development in the EU.
@@ -54,7 +54,7 @@ export function Hero() { // Changed function name to PascalCase for React compon
           The future of AI in Europe is intrinsically tied to our compute capabilities. By working together to build this foundation, we can secure Europe&apos;s place at the forefront of the AI revolution, ensuring that our continent remains a leader in technological innovation for generations to come.
         </p>
       </section>
-      <section className="flex flex-col items-center justify-center max-w-4xl mx-auto md:flex-row md:space-x-8">
+      <section className="flex flex-col items-center justify-center max-w-4xl mx-auto md:flex-row md:space-x-8 p-3 sm:p-0">
         <div className="w-full md:w-1/2">
           {/* Replaced <img> with <Image /> */}
           <Image
@@ -75,14 +75,14 @@ export function Hero() { // Changed function name to PascalCase for React compon
       </section>
 
       <section className="w-full bg-blue-200 space-y-32 py-32">
-        <div className="max-w-2xl mx-auto space-y-4">
+        <div className="max-w-2xl mx-auto space-y-4 p-3 sm:p-0">
           <h2 className="text-xl font-bold">GPUs for Europe</h2>
           <p>
             We are prepared to invest significantly in developing EU-based compute infrastructure. However, this investment must be met with a supportive policy environment that recognizes the foundational role of local compute in driving AI innovation. We urge EU policymakers to act decisively in creating a unified strategy that places EU-based compute at the heart of our AI ambitions. This is not just about keeping pace with global competitors; it&apos;s about charting a uniquely European path in AI development – one that reflects our values, protects our data, and drives our economy forward.
           </p>
         </div>
       </section>
-      <section className="max-w-2xl mx-auto space-y-4">
+      <section className="max-w-2xl mx-auto space-y-4 p-3 sm:p-0">
         <p>
           The future of AI in Europe is intrinsically tied to our compute capabilities. By working together to build this foundation, we can secure Europe&apos;s place at the forefront of the AI revolution, ensuring that our continent remains a leader in technological innovation for generations to come.
         </p>

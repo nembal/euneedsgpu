@@ -111,8 +111,8 @@ const SignupForm = () => {
             required
           >
             <option value="">Select a country</option>
-            {countries.map((country) => (
-              <option key={country.code} value={country.name}>
+            {countries.map((country, index) => (
+              <option key={`${country.code}-${index}`} value={country.name}>
                 {country.name}
               </option>
             ))}
