@@ -1,13 +1,18 @@
 'use client';
 
 import { useState } from 'react';
-import { createClient } from '@supabase/supabase-js';
+import { createClient } from '@supabase/supabase-js'
 import { Button } from './ui/button';
 import countries from './countries.json'; // Import the countries.json
 
-const supabaseUrl = 'https://your-supabase-url.supabase.co';
-const supabaseKey = 'your-supabase-key';
-const supabase = createClient(supabaseUrl, supabaseKey);
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+if (!supabaseUrl || !supabaseAnonKey) {
+  throw new Error('Missing Supabase environment variables')
+}
+
+const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
 const SignupForm = () => {
   const [formData, setFormData] = useState({
@@ -18,6 +23,7 @@ const SignupForm = () => {
     company: '',
     jobTitle: '',
   });
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -28,16 +34,41 @@ const SignupForm = () => {
     e.preventDefault();
     const { firstName, lastName, email, country, company, jobTitle } = formData;
 
-    const { data, error } = await supabase
-      .from('signups')
-      .insert([{ first_name: firstName, last_name: lastName, email, country, company, job_title: jobTitle }]);
+    try {
+      const { data, error } = await supabase
+        .from('signups')
+        .insert([
+          { 
+            first_name: firstName, 
+            last_name: lastName, 
+            email, 
+            country, 
+            company, 
+            job_title: jobTitle 
+          }
+        ]);
 
-    if (error) {
-      console.error('Error inserting data:', error);
-    } else {
-      console.log('Data inserted successfully:', data);
+      if (error) {
+        console.error('Error inserting data:', error);
+        // You might want to show an error message to the user here
+      } else {
+        console.log('Data inserted successfully:', data);
+        setIsSubmitted(true);
+      }
+    } catch (error) {
+      console.error('An unexpected error occurred:', error);
+      // You might want to show a generic error message to the user here
     }
   };
+
+  if (isSubmitted) {
+    return (
+      <div className="max-w-2xl mx-auto p-8 bg-white rounded shadow" id="signup">
+        <h2 className="text-2xl font-bold mb-4 font-inter">Thank you for signing up for EU GPUs!</h2>
+        <p className="mb-8 font-inter font-normal">We will be in touch soon.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-2xl mx-auto p-8 bg-white rounded shadow" id="signup">
