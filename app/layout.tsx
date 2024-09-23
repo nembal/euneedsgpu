@@ -13,7 +13,7 @@ export const metadata = {
     siteName: 'EU needs GPUs for AI',
     images: [
       {
-        url: 'https://euneedsgpu.com/og-image.png',
+        url: '/og_image.png', // Updated path
         width: 1200,
         height: 630,
         alt: 'EU GPU GPU',
@@ -26,7 +26,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'EU needs GPU',
     description: 'EU needs more GPUs for AI',
-    images: ['https://euneedsgpu.com/og-image.png'],
+    images: ['/og_image.png'], // Updated path
     creator: '@bearmetalGPU',
   },
   viewport: 'width=device-width, initial-scale=1',
