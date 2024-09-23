@@ -87,7 +87,7 @@ export function Hero() { // Changed function name to PascalCase for React compon
           The future of AI in Europe is intrinsically tied to our compute capabilities. By working together to build this foundation, we can secure Europe&apos;s place at the forefront of the AI revolution, ensuring that our continent remains a leader in technological innovation for generations to come.
         </p>
         <p className="text-sm text-gray-600 pt-8">
-          1. <a href="https://www.jpmorgan.com/insights/global-research/artificial-intelligence/generative-ai" target="_blank" rel="noopener noreferrer">"Is generative AI a game changer?", JP Morgan, February 2024</a>
+          1. <a href="https://www.jpmorgan.com/insights/global-research/artificial-intelligence/generative-ai" target="_blank" rel="noopener noreferrer">&quot;Is generative AI a game changer?&quot;, JP Morgan, February 2024</a>
         </p>
       </section>
       <section className="max-w-2xl mx-auto space-y-4">
