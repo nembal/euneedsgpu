@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import { Button } from './ui/button';
+import countries from './countries.json'; // Import the countries.json
 
 const supabaseUrl = 'https://your-supabase-url.supabase.co';
 const supabaseKey = 'your-supabase-key';
@@ -79,9 +80,11 @@ const SignupForm = () => {
             required
           >
             <option value="">Select a country</option>
-            <option value="Country 1">Country 1</option>
-            <option value="Country 2">Country 2</option>
-            {/* Add more countries as needed */}
+            {countries.map((country) => (
+              <option key={country.code} value={country.name}>
+                {country.name}
+              </option>
+            ))}
           </select>
           <input
             type="text"
