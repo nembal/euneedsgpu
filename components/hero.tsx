@@ -5,8 +5,9 @@
 */
 import { Button } from "@/components/ui/button";
 import SignupForm from "@/components/SingupForm";
+import Image from "next/image"; // Import Next.js Image component
 
-export function hero() {
+export function Hero() { // Changed function name to PascalCase for React components
   return (
     <div className="space-y-32">
       <section className="relative flex flex-col items-center justify-center max-h-[66vh] min-h-[66vh] bg-blue-100">
@@ -28,7 +29,7 @@ export function hero() {
       <section className="max-w-2xl mx-auto space-y-4">
         <h2 className="text-xl font-bold">Hardware and Software: The Foundation for AI Leadership in Europe</h2>
         <p>
-          As a technology company deeply invested in Europe's future, we firmly believe that robust EU-based compute infrastructure, both hardware and software, is the bedrock upon which European AI innovation must be built. The two are inextricably linked – without significant local computing power, particularly GPU resources, and advanced software, there can be no meaningful AI development in the EU.
+          As a technology company deeply invested in Europe&apos;s future, we firmly believe that robust EU-based compute infrastructure, both hardware and software, is the bedrock upon which European AI innovation must be built. The two are inextricably linked – without significant local computing power, particularly GPU resources, and advanced software, there can be no meaningful AI development in the EU.
         </p>
         <h2 className="text-xl font-bold">The Importance of AI</h2>
         <p>
@@ -41,33 +42,34 @@ export function hero() {
         </p>
         <h2 className="text-xl font-bold">The Importance of Hardware</h2>
         <p>
-          Within this broader compute landscape, GPUs play a crucial role. These powerful processors are essential for training large-scale AI models efficiently, offer superior energy efficiency aligning with EU's green initiatives, and support a wide range of scientific and industrial applications beyond AI. By investing in EU-based compute infrastructure, particularly GPU clusters, we lay the groundwork for a thriving AI industry that could potentially contribute billions of euros to the EU economy and position Europe as a global leader in AI innovation.
+          Within this broader compute landscape, GPUs play a crucial role. These powerful processors are essential for training large-scale AI models efficiently, offer superior energy efficiency aligning with EU&apos;s green initiatives, and support a wide range of scientific and industrial applications beyond AI. By investing in EU-based compute infrastructure, particularly GPU clusters, we lay the groundwork for a thriving AI industry that could potentially contribute billions of euros to the EU economy and position Europe as a global leader in AI innovation.
         </p>
         <p>
           To realize this vision, we need a cohesive EU-wide strategy that recognizes the symbiotic relationship between local compute resources and AI development. This strategy should encourage both private and public investment in EU-based high-performance computing facilities, provide clear and consistent regulations on the deployment and use of large-scale compute resources for AI research and development, and facilitate the sharing of compute resources across EU member states to foster a truly European AI ecosystem.
         </p>
         <p>
-          As a company, we are prepared to invest significantly in developing EU-based compute infrastructure. However, this investment must be met with a supportive policy environment that recognizes the foundational role of local compute in driving AI innovation. We urge EU policymakers to act decisively in creating a unified strategy that places EU-based compute at the heart of our AI ambitions. This is not just about keeping pace with global competitors; it's about charting a uniquely European path in AI development – one that reflects our values, protects our data, and drives our economy forward.
+          As a company, we are prepared to invest significantly in developing EU-based compute infrastructure. However, this investment must be met with a supportive policy environment that recognizes the foundational role of local compute in driving AI innovation. We urge EU policymakers to act decisively in creating a unified strategy that places EU-based compute at the heart of our AI ambitions. This is not just about keeping pace with global competitors; it&apos;s about charting a uniquely European path in AI development – one that reflects our values, protects our data, and drives our economy forward.
         </p>
         <p>
-          The future of AI in Europe is intrinsically tied to our compute capabilities. By working together to build this foundation, we can secure Europe's place at the forefront of the AI revolution, ensuring that our continent remains a leader in technological innovation for generations to come.
+          The future of AI in Europe is intrinsically tied to our compute capabilities. By working together to build this foundation, we can secure Europe&apos;s place at the forefront of the AI revolution, ensuring that our continent remains a leader in technological innovation for generations to come.
         </p>
       </section>
       <section className="flex flex-col items-center justify-center max-w-4xl mx-auto md:flex-row md:space-x-8">
         <div className="w-full md:w-1/2">
-          <img
+          {/* Replaced <img> with <Image /> */}
+          <Image
             src="/vector_image.jpg"
             alt="AI illustration"
             className="w-full h-auto"
-            width="300"
-            height="300"
-            style={{ aspectRatio: "300/300", objectFit: "cover" }}
+            width={300}
+            height={300}
+            style={{ objectFit: "cover" }}
           />
         </div>
         <div className="w-full mt-8 space-y-4 md:w-1/2 md:mt-0">
           <p className="text-4xl font-bold">
-            Research estimates that Generative AI could increase global GDP by 10% over the coming decade<sup>1</sup>{" "}
-            and EU citizens shouldn`t be denied that growth.
+            Research estimates that Generative AI could increase global GDP by 10% over the coming decade<sup>1</sup>{' '}
+            and EU citizens shouldn&apos;t be denied that growth.
           </p>
         </div>
       </section>
@@ -76,13 +78,13 @@ export function hero() {
         <div className="max-w-2xl mx-auto space-y-4">
           <h2 className="text-xl font-bold">GPUs for Europe</h2>
           <p>
-            we are prepared to invest significantly in developing EU-based compute infrastructure. However, this investment must be met with a supportive policy environment that recognizes the foundational role of local compute in driving AI innovation. We urge EU policymakers to act decisively in creating a unified strategy that places EU-based compute at the heart of our AI ambitions. This is not just about keeping pace with global competitors; it's about charting a uniquely European path in AI development – one that reflects our values, protects our data, and drives our economy forward.
+            We are prepared to invest significantly in developing EU-based compute infrastructure. However, this investment must be met with a supportive policy environment that recognizes the foundational role of local compute in driving AI innovation. We urge EU policymakers to act decisively in creating a unified strategy that places EU-based compute at the heart of our AI ambitions. This is not just about keeping pace with global competitors; it&apos;s about charting a uniquely European path in AI development – one that reflects our values, protects our data, and drives our economy forward.
           </p>
         </div>
       </section>
       <section className="max-w-2xl mx-auto space-y-4">
         <p>
-        The future of AI in Europe is intrinsically tied to our compute capabilities. By working together to build this foundation, we can secure Europe's place at the forefront of the AI revolution, ensuring that our continent remains a leader in technological innovation for generations to come.
+          The future of AI in Europe is intrinsically tied to our compute capabilities. By working together to build this foundation, we can secure Europe&apos;s place at the forefront of the AI revolution, ensuring that our continent remains a leader in technological innovation for generations to come.
         </p>
         <p className="text-sm text-gray-600 pt-8">
           1. <a href="https://www.jpmorgan.com/insights/global-research/artificial-intelligence/generative-ai" target="_blank" rel="noopener noreferrer">"Is generative AI a game changer?", JP Morgan, February 2024</a>
