@@ -1,4 +1,5 @@
 import './globals.css'
+import { Analytics } from "@vercel/analytics/react"
 // Removed unused import 'Manrope'
 
 export const metadata = {
@@ -40,6 +41,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Analytics/>
       <head>
         {/* Additional SEO tags can be added here if necessary */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-26QY7T0JC3"></script>
