@@ -42,6 +42,16 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Additional SEO tags can be added here if necessary */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-26QY7T0JC3"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-26QY7T0JC3');
+          `}
+        </script>
       </head>
       <body>{children}</body>
     </html>
